@@ -18,7 +18,10 @@ def main():
                 speaker = match_result[5]
                 
                 time_seconds = (int(day)*24*60*60)+(int(hour)*60*60)+(int(minute)*60)+(int(second))
+                
+
                 time.sleep(time_seconds - mission_time_seconds)
+                mission_time_seconds = time_seconds
             else:
                 stripped_line = line.strip()
                 if stripped_line and speaker:

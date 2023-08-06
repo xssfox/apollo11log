@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "apollo11log"
-version = "0.1.1"
+version = "0.1.2"
 description = "Prints Apollo 11 Logs is realtime"
 authors = ["xss <michaela@michaela.lgbt>"]
 readme = "README.md"
