@@ -19,8 +19,11 @@ def main():
                 
                 time_seconds = (int(day)*24*60*60)+(int(hour)*60*60)+(int(minute)*60)+(int(second))
                 
-
-                time.sleep(time_seconds - mission_time_seconds)
+                sleep_time = time_seconds - mission_time_seconds
+                sleep_time = 1 if sleep_time < 0 else sleep_time
+                if sleep_time > 60*60*24: # sometimes the transcription is wrong
+                    sleep_time = 1
+                time.sleep(sleep_time)
                 mission_time_seconds = time_seconds
             else:
                 stripped_line = line.strip()
